@@ -98,6 +98,8 @@ final class BookDetailVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        setUI()
+        setLayout()
         getBookDetail(id: selectedBookIndex)
     }
     
