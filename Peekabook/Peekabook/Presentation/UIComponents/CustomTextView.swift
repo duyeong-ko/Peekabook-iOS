@@ -190,6 +190,7 @@ extension CustomTextView {
             maxLabel.isHidden = false
         case .editBookComment:
             proposalItemhidden()
+            textView.text = I18N.BookDetail.commentPlaceholder + placeholderBlank
             maxLabel.isHidden = false
         case .bookDetailComment:
             maxLabel.isHidden = true

@@ -323,9 +323,15 @@ extension BookDetailVC {
     
     @objc
     private func cancelEditButtonDidTap() {
-        mode = .show
-        updateViewBasedOnMode(.show)
         getBookData()
+        if peekaCommentView.text == I18N.BookDetail.commentPlaceholder + placeholderBlank {
+            peekaCommentView.text = I18N.BookDetail.emptyComment
+        }
+        if peekaMemoView.text == I18N.BookDetail.memoPlaceholder + placeholderBlank {
+            peekaMemoView.text = I18N.BookDetail.emptyMemo
+        }
+        updateViewBasedOnMode(.show)
+        mode = .show
     }
     
     @objc
